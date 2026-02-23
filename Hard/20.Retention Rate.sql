@@ -14,6 +14,6 @@ select
     ceiling(
         (count(distinct post_jan_user)/count(distinct jan_user)::float)/
         (count(distinct post_dec_user)/count(distinct dec_user)::float)
-          )
+          ) as retention_rate
 from cte
 group by 1
